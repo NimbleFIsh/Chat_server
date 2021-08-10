@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "uuid": "^8.3.2",
+    "ws": "^8.0.0"
+  },
+  "name": "chat_server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NimbleFIsh/Chat_server.git"
+  },
+  "author": "NimbleFish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NimbleFIsh/Chat_server/issues"
+  },
+  "homepage": "https://github.com/NimbleFIsh/Chat_server#readme",
+  "description": ""
+}

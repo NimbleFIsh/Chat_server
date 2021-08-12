@@ -35,6 +35,16 @@ function sockConn(ws, id, username) {
     }));
     online[id] = ws;
 
+    const welcomeMessage = JSON.stringify({
+        'id': '1111-1111-1111-1111',
+        'name': 'Server',
+        'message': `Welcome, ${username}!`,
+        'date': new Date().getTime()
+    })
+
+    for (let client in online) online[client].send(welcomeMessage);
+    history.push(welcomeMessage);
+
     ws.on('message', msg => {
         msg = msg.toString(); // msg - по умолчанию Buffer, перевод в нормальную форму
         for (let client in online) (client !== id) && online[client].send(msg);

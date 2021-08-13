@@ -134,5 +134,5 @@ function exit() {
 ['SIGKILL', 'SIGQUIT', 'SIGSTOP', 'SIGTERM', 'SIGUSR2', 'SIGINT'].forEach(died => 
     process.on(died, exit));
 
-server.listen(process.env.PORT || PORT, () =>
-    console.log('Server started on port:', process.env.PORT || PORT));
+server.listen(process.env.port || PORT, () =>
+    console.log('Server started on port:', process.env.port || PORT));

@@ -10,7 +10,7 @@ const jsonParser = express.json();
 server.use(cors());
 
 const online = {};
-const PORT = '3034';
+const port = '3034';
 
 const pathToUserNames = path.resolve(__dirname, './data/userNames.json');
 const pathToHistory = path.resolve(__dirname, './data/history.json');
@@ -133,5 +133,5 @@ function exit() {
 
 process.on('SIGTERM', exit);
 
-server.listen(process.env.port || PORT, () =>
-    console.log('Server started on port:', process.env.port || PORT));
+server.listen(process.env.PORT || port, () =>
+    console.log('Server started on port:', process.env.PORT || port));

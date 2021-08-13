@@ -131,7 +131,7 @@ function exit() {
     });
 }
 
-['SIGKILL', 'SIGQUIT', 'SIGSTOP', 'SIGTERM', 'SIGUSR2', 'SIGINT'].forEach(died => 
+['SIGQUIT', 'SIGSTOP', 'SIGTERM', 'SIGUSR2', 'SIGINT'].forEach(died => 
     process.on(died, exit));
 
 server.listen(process.env.port || PORT, () =>
